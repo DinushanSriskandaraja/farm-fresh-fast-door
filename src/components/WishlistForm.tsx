@@ -101,7 +101,7 @@ export const WishlistForm = ({ onSuccess }: WishlistFormProps) => {
         <Label htmlFor="contact" className="text-base font-semibold">Email or Mobile Number *</Label>
         <Input
           id="contact"
-          placeholder="your@email.com or +91 98765 43210"
+          placeholder="your@email.com or +94 123456789"
           {...register("contact")}
           className="bg-background shadow-sm"
         />
@@ -112,7 +112,7 @@ export const WishlistForm = ({ onSuccess }: WishlistFormProps) => {
         <Label htmlFor="location" className="text-base font-semibold">Your Location (City/Area) *</Label>
         <Input
           id="location"
-          placeholder="e.g., Bangalore - Koramangala"
+          placeholder="e.g., Wellawatta - Colombo"
           {...register("location")}
           className="bg-background shadow-sm"
         />
