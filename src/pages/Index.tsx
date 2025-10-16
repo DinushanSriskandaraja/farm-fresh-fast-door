@@ -23,54 +23,55 @@ const Index = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${heroImage})`,
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${heroImage})`,
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/20 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-transparent to-background/80" />
 
-        <div className="relative z-10 container mx-auto px-4 py-20 text-center">
-          <div className="flex justify-center mb-6 animate-float">
-            <div className="bg-card/90 backdrop-blur-sm p-4 rounded-2xl shadow-2xl">
-              <Sprout className="h-16 w-16 text-primary" />
+        <div className="relative z-10 container mx-auto px-4 py-20 text-center animate-fade-in">
+          <div className="flex justify-center mb-8 animate-float">
+            <div className="bg-card/95 backdrop-blur-md p-5 rounded-3xl shadow-2xl border border-white/20">
+              <Sprout className="h-20 w-20 text-primary drop-shadow-lg" />
             </div>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-2xl">
+          <h1 className="text-6xl md:text-8xl font-bold mb-6 text-white drop-shadow-2xl tracking-tight">
             FarmEra
           </h1>
-          <p className="text-2xl md:text-3xl mb-4 text-white font-semibold drop-shadow-lg">
+          <p className="text-2xl md:text-4xl mb-4 text-white font-bold drop-shadow-lg">
             Fresh from the farm to your door in 15 minutes.
           </p>
-          <p className="text-lg md:text-xl mb-8 text-white/90 max-w-2xl mx-auto drop-shadow-md">
+          <p className="text-lg md:text-xl mb-10 text-white/95 max-w-2xl mx-auto drop-shadow-md leading-relaxed">
             Get farm-fresh fruits and veggies at your doorstep — faster than ever before.
             Supporting local farmers, delivering pure freshness.
           </p>
 
-          <div className="flex flex-col items-center gap-4 mb-8">
+          <div className="flex flex-col items-center gap-6 mb-10">
             <Button
               size="lg"
               onClick={scrollToForm}
-              className="text-lg px-8 py-6 gradient-primary shadow-2xl hover:scale-105 transition-transform"
+              className="text-xl px-12 py-8 gradient-cta shadow-2xl hover:scale-110 transition-all duration-300 font-bold rounded-2xl animate-pulse-glow"
             >
               Join the Wishlist 🚀
             </Button>
             <SocialProofCounter />
           </div>
 
-          <div className="flex flex-col items-center gap-2 text-white/80 text-sm">
-            <p>⚡ Limited early access for the first 1,000 people</p>
-            <p>🔒 Be the first to know when we launch in your city</p>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-white/90 text-base bg-white/10 backdrop-blur-sm px-6 py-4 rounded-2xl max-w-2xl mx-auto border border-white/20">
+            <p className="flex items-center gap-2">⚡ Limited early access for first 1,000 people</p>
+            <span className="hidden md:inline">•</span>
+            <p className="flex items-center gap-2">🔒 Priority launch notification</p>
           </div>
 
-          <div className="mt-12 animate-bounce">
-            <ArrowDown className="h-8 w-8 text-white mx-auto" />
+          <div className="mt-16 animate-bounce">
+            <ArrowDown className="h-10 w-10 text-white mx-auto drop-shadow-lg" />
           </div>
         </div>
       </section>
 
       {/* Trust Badges */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4 animate-slide-up">
           <TrustBadges />
         </div>
       </section>
@@ -83,33 +84,33 @@ const Index = () => {
       </section>
 
       {/* Farmer Trust Section */}
-      <section className="py-20 bg-background">
+      <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+              <div className="animate-slide-up">
                 <img
                   src={farmerImage}
                   alt="Local farmer with fresh produce"
-                  className="rounded-2xl shadow-2xl"
+                  className="rounded-3xl shadow-elegant hover:shadow-glow transition-shadow duration-500 border-4 border-primary/10"
                 />
               </div>
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <div className="animate-fade-in">
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
                   Empowering Local Farmers, Nourishing Your Family
                 </h2>
-                <p className="text-lg text-muted-foreground mb-4">
+                <p className="text-xl text-muted-foreground mb-5 leading-relaxed">
                   Every order supports hardworking farmers in your community. No middlemen, no
                   delays — just pure, honest farm-to-table goodness.
                 </p>
-                <p className="text-lg text-muted-foreground mb-6">
+                <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
                   Join thousands who are already excited to make a difference while enjoying the
                   freshest produce.
                 </p>
                 <Button
                   size="lg"
                   onClick={scrollToForm}
-                  className="gradient-primary"
+                  className="gradient-primary text-lg px-8 py-7 shadow-glow hover:shadow-xl"
                 >
                   Join Now & Support Local Farmers
                 </Button>
@@ -120,38 +121,39 @@ const Index = () => {
       </section>
 
       {/* Wishlist Form Section */}
-      <section id="wishlist-form" className="py-20 bg-accent/30">
+      <section id="wishlist-form" className="py-24 bg-accent/30">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">
+          <div className="max-w-3xl mx-auto text-center mb-14 animate-slide-up">
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
               Join the FarmEra Wishlist
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-xl text-muted-foreground leading-relaxed">
               Be among the first to experience farm-fresh delivery in your city. Tell us what you
               want, and we'll make it happen!
             </p>
           </div>
 
-          <div className="bg-card p-8 md:p-12 rounded-3xl shadow-xl border border-border">
+          <div className="bg-card p-10 md:p-16 rounded-3xl shadow-elegant hover:shadow-glow transition-shadow duration-500 border-2 border-primary/10 animate-fade-in">
             <WishlistForm onSuccess={() => setShowSuccessModal(true)} />
           </div>
         </div>
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 bg-gradient-primary text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+      <section className="py-20 gradient-primary text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent" />
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg">
             Don't Miss Out on the Freshness Revolution
           </h2>
-          <p className="text-xl mb-8 opacity-90">
+          <p className="text-xl md:text-2xl mb-10 opacity-95 max-w-2xl mx-auto">
             Join now and get exclusive early access when we launch in your city!
           </p>
           <Button
             size="lg"
             onClick={scrollToForm}
             variant="secondary"
-            className="text-lg px-8 py-6 shadow-xl hover:scale-105 transition-transform"
+            className="text-xl px-12 py-8 shadow-2xl hover:scale-110 transition-all duration-300 font-bold rounded-2xl"
           >
             Secure Your Spot Now 🍃
           </Button>
@@ -178,8 +180,8 @@ const Index = () => {
       <SuccessModal open={showSuccessModal} onOpenChange={setShowSuccessModal} />
 
       {/* Sticky Mobile CTA */}
-      <div className="fixed bottom-0 left-0 right-0 p-4 bg-background/95 backdrop-blur-sm border-t border-border md:hidden z-50">
-        <Button onClick={scrollToForm} className="w-full gradient-primary py-6">
+      <div className="fixed bottom-0 left-0 right-0 p-4 bg-background/98 backdrop-blur-md border-t-2 border-primary/20 md:hidden z-50 shadow-elegant">
+        <Button onClick={scrollToForm} className="w-full gradient-cta py-7 text-lg font-bold shadow-glow hover:scale-105">
           Join Wishlist Now 🚀
         </Button>
       </div>

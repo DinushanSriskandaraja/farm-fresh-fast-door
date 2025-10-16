@@ -125,6 +125,28 @@ All colors MUST be HSL.
     background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
   }
 
+  .gradient-cta {
+    background: linear-gradient(135deg, hsl(var(--secondary)), hsl(25 95% 45%));
+  }
+
+  /* Premium shadows */
+  .shadow-elegant {
+    box-shadow: 0 10px 40px -10px hsl(var(--primary) / 0.2);
+  }
+
+  .shadow-soft {
+    box-shadow: 0 4px 20px -4px hsl(0 0% 0% / 0.1);
+  }
+
+  .shadow-glow {
+    box-shadow: 0 0 30px hsl(var(--primary) / 0.25);
+  }
+
+  /* Smooth transitions */
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
   /* Animations */
   @keyframes float {
     0%, 100% { transform: translateY(0px); }
@@ -136,11 +158,29 @@ All colors MUST be HSL.
     50% { box-shadow: 0 0 40px hsl(var(--primary) / 0.6); }
   }
 
+  @keyframes slide-up {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
   .animate-float {
     animation: float 3s ease-in-out infinite;
   }
 
   .animate-pulse-glow {
     animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.6s ease-out;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out;
   }
 }

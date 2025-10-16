@@ -85,38 +85,38 @@ export const WishlistForm = ({ onSuccess }: WishlistFormProps) => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 max-w-2xl mx-auto">
-      <div className="space-y-2">
-        <Label htmlFor="fullName">Full Name *</Label>
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-8 max-w-2xl mx-auto">
+      <div className="space-y-3">
+        <Label htmlFor="fullName" className="text-base font-semibold">Full Name *</Label>
         <Input
           id="fullName"
           placeholder="Enter your full name"
           {...register("fullName")}
-          className="bg-card"
+          className="bg-background shadow-sm"
         />
-        {errors.fullName && <p className="text-sm text-destructive">{errors.fullName.message}</p>}
+        {errors.fullName && <p className="text-sm text-destructive font-medium">{errors.fullName.message}</p>}
       </div>
 
-      <div className="space-y-2">
-        <Label htmlFor="contact">Email or Mobile Number *</Label>
+      <div className="space-y-3">
+        <Label htmlFor="contact" className="text-base font-semibold">Email or Mobile Number *</Label>
         <Input
           id="contact"
           placeholder="your@email.com or +91 98765 43210"
           {...register("contact")}
-          className="bg-card"
+          className="bg-background shadow-sm"
         />
-        {errors.contact && <p className="text-sm text-destructive">{errors.contact.message}</p>}
+        {errors.contact && <p className="text-sm text-destructive font-medium">{errors.contact.message}</p>}
       </div>
 
-      <div className="space-y-2">
-        <Label htmlFor="location">Your Location (City/Area) *</Label>
+      <div className="space-y-3">
+        <Label htmlFor="location" className="text-base font-semibold">Your Location (City/Area) *</Label>
         <Input
           id="location"
           placeholder="e.g., Bangalore - Koramangala"
           {...register("location")}
-          className="bg-card"
+          className="bg-background shadow-sm"
         />
-        {errors.location && <p className="text-sm text-destructive">{errors.location.message}</p>}
+        {errors.location && <p className="text-sm text-destructive font-medium">{errors.location.message}</p>}
       </div>
 
       <div className="space-y-3">
