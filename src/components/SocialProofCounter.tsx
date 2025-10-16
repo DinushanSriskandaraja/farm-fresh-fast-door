@@ -3,7 +3,7 @@ import { Users } from "lucide-react";
 
 export const SocialProofCounter = () => {
   const [count, setCount] = useState(0);
-  const targetCount = 627; // Can be updated from database in the future
+  const targetCount = 40; // Can be updated from database in the future
 
   useEffect(() => {
     const duration = 2000; // 2 seconds
