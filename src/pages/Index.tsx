@@ -58,7 +58,7 @@ const Index = () => {
           </div>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-white/90 text-base bg-white/10 backdrop-blur-sm px-6 py-4 rounded-2xl max-w-2xl mx-auto border border-white/20">
-            <p className="flex items-center gap-2">⚡ Limited early access for first 1,000 people</p>
+            <p className="flex items-center gap-2">⚡ Limited early access for first 100 people</p>
             <span className="hidden md:inline">•</span>
             <p className="flex items-center gap-2">🔒 Priority launch notification</p>
           </div>
@@ -83,42 +83,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Farmer Trust Section */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-16 items-center">
-              <div className="animate-slide-up">
-                <img
-                  src={farmerImage}
-                  alt="Local farmer with fresh produce"
-                  className="rounded-3xl shadow-elegant hover:shadow-glow transition-shadow duration-500 border-4 border-primary/10"
-                />
-              </div>
-              <div className="animate-fade-in">
-                <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                  Empowering Local Farmers, Nourishing Your Family
-                </h2>
-                <p className="text-xl text-muted-foreground mb-5 leading-relaxed">
-                  Every order supports hardworking farmers in your community. No middlemen, no
-                  delays — just pure, honest farm-to-table goodness.
-                </p>
-                <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                  Join thousands who are already excited to make a difference while enjoying the
-                  freshest produce.
-                </p>
-                <Button
-                  size="lg"
-                  onClick={scrollToForm}
-                  className="gradient-primary text-lg px-8 py-7 shadow-glow hover:shadow-xl"
-                >
-                  Join Now & Support Local Farmers
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Wishlist Form Section */}
       <section id="wishlist-form" className="py-24 bg-accent/30">
